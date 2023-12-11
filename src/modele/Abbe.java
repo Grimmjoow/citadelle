@@ -2,7 +2,7 @@ package modele;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-import Controleur.Interaction;
+import controleur.Interaction;
 
 public class Abbe extends Personnage{
 

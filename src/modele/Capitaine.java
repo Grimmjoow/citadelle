@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import Exception.CantChoose;
 import Exception.SelfChosen;
-import Controleur.Interaction;
+import controleur.Interaction;
 import Exception.SelfChosen;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.Random;

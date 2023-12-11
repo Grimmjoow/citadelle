@@ -1,6 +1,6 @@
 package modele;
 
-import Controleur.Interaction;
+import controleur.Interaction;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -199,7 +199,4 @@ public class Magicienne extends Personnage {
             System.out.println("Le personnage est assassiné.");
         }
     }
-
-    @Override
-    public void activationPouvoirSorciere(Joueur joueurSorciere) {
-        // TODO: Implémenter la méthode pour l'activation du pouvoir de
+}

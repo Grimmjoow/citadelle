@@ -3,7 +3,7 @@ package modele;
 import java.util.ArrayList;
 import java.util.Random;
 
-import Controleur.Interaction;
+import controleur.Interaction;
 
 public class Archiviste extends Personnage {
 

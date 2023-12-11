@@ -5,8 +5,7 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
-
-import Controleur.Interaction;
+import controleur.Interaction;
 import Exception.CantChoose;
 import Exception.NePeutPasDetruire;
 import Exception.TresorInsuffisant;

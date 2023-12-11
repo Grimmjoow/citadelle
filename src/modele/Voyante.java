@@ -4,7 +4,7 @@ package modele;
 // Import des classes nécessaires
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
-import Controleur.Interaction;
+import controleur.Interaction;
 
 // Déclaration de la classe "Voyante"
 public class Voyante extends Personnage {
@@ -108,5 +108,5 @@ public class Voyante extends Personnage {
             listeJoueur.get(i).ajouterQuartierDansMain(quartier2);
         }
     }
-
+}
     //

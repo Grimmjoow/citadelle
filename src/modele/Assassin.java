@@ -1,6 +1,6 @@
 package modele;
 
-import Controleur.Interaction;
+import controleur.Interaction;
 import Exception.SelfChosen;
 import Exception.WrongInput;
 

@@ -1,5 +1,5 @@
 // Package "Controleur"
-package Controleur;
+package controleur;
 
 // Import des classes nécessaires
 import java.util.InputMismatchException;

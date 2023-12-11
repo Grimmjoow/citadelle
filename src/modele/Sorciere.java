@@ -3,7 +3,7 @@ package modele;
 
 // Import de la classe "Random"
 import java.util.Random;
-
+import controleur.Interaction;
 // Import de la classe "Interaction" du package "Controleur" 
 
 // Déclaration de la classe "Sorciere" qui étend la classe "Personnage"

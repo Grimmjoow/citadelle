@@ -2,7 +2,7 @@ package modele;
 
 import java.util.Random;
 
-import Controleur.Interaction;
+import controleur.Interaction;
 
 public class Echevin extends Personnage {
     // Constructeur par défaut de la classe Echevin

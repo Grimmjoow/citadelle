@@ -3,7 +3,7 @@ package modele;
 
 // Import de la classe "Random"
 import java.util.Random;
-
+import controleur.Interaction;
 // Import de la classe "Interaction" du package "Controleur" 
 
 // Import de la classe "ArrayList" pour gérer les listes dynamiques

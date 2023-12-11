@@ -1,6 +1,6 @@
 package modele;
 
-import Controleur.Interaction;
+import controleur.Interaction;
 
 /**
  * La classe Main est la classe principale du programme, contenant la méthode main.

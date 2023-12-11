@@ -1,7 +1,7 @@
 package modele;
 
 import java.util.Random;
-import Controleur.Interaction;
+import controleur.Interaction;
 import application.Configuration;
 
 import java.util.ArrayList;
