@@ -20,7 +20,7 @@ import modele.Personnage;
 import modele.Pioche;
 import modele.PlateauDeJeu;
 import modele.Quartier;
-import Controleur.Interaction;
+import controleur.Interaction;
 import modele.*;
 
 
@@ -2150,11 +2150,4 @@ public class Jeu {
         
 
     }
-
-
-    
-
-
->>>>>>> b8bdd9eab83822a8ba09a59afffdabfa98a55e25
-    
 }

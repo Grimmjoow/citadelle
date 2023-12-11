@@ -1,6 +1,6 @@
 package test;
 
-import Controleur.Interaction;
+import controleur.Interaction;
 
 public class TestInteraction {
 	public static void main(String[] args){
