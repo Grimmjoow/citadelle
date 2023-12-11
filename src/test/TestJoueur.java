@@ -6,11 +6,11 @@ import modele.Joueur;
 public class TestJoueur {
 	public static void main(String[] args){
 		TestJoueur testJoueur = new TestJoueur();
-		//testJoueur.test1();
-		//testJoueur.test2();	
-		//testJoueur.test3();
-		//testJoueur.test4();
-		testJoueur.test5();	
+		// testJoueur.test1();
+		// testJoueur.test2();	
+		// testJoueur.test3();
+		testJoueur.test4();
+		// testJoueur.test5();	
 	}	
 	
 	public void test1(){
@@ -18,9 +18,9 @@ public class TestJoueur {
 		Joueur joueur = new Joueur("Billy");
 		Test.test(joueur.getNom().equals("Billy"),"test du nom du joueur");
 		Test.test(joueur.nbPieces() == 0,"test du tr�sor initial du joueur");
-		Test.test(joueur.nbQuartiersDansCite()== 0,
+		Test.test(joueur.nbQuartiersReelDansCite()== 0,
 				"test de nombre de quartiers dans la cite");
-		Test.test(joueur.nbQuartiersDansMain()== 0,
+		Test.test(joueur.nbQuartiersReelDansMain()== 0,
 				"test du nombre de quartiers dans la main du joueur");
 	}
 	
@@ -50,12 +50,12 @@ public class TestJoueur {
 		joueur.ajouterQuartierDansCite(quartier1);
 		joueur.ajouterQuartierDansCite(quartier2);
 		joueur.ajouterQuartierDansCite(quartier3);
-		Test.test(joueur.nbQuartiersDansCite() == 3,"test de l'ajout de trois quartiers");
+		Test.test(joueur.nbQuartiersReelDansCite() == 3,"test de l'ajout de trois quartiers");
 		Test.test(joueur.quartierPresentDansCite("temple"), "test de pr�sence d'un quartier");
 		Quartier retour = joueur.retirerQuartierDansCite("prison");
-		Test.test(joueur.nbQuartiersDansCite() == 2 && retour==quartier2, 
+		Test.test(joueur.nbQuartiersReelDansCite() == 2 && retour==quartier2, 
 				"test de retrait d'un quartier");
-		Test.test(!joueur.quartierPresentDansCite("march�"), "test de non pr�sence d'un quartier");
+		Test.test(!joueur.quartierPresentDansCite("marché"), "test de non pr�sence d'un quartier");
 	}
 	
 	public void test4() {
@@ -68,9 +68,12 @@ public class TestJoueur {
 		joueur.ajouterQuartierDansMain(quartier1);
 		joueur.ajouterQuartierDansMain(quartier2);
 		joueur.ajouterQuartierDansMain(quartier3);
-		Test.test(joueur.nbQuartiersDansMain() == 3,"test de l'ajout de trois quartiers");
+		joueur.ajouterQuartierDansMain(null);
+		
+
+		Test.test(joueur.nbQuartiersReelDansMain() == 3,"test de l'ajout de trois quartiers");
 		Quartier retour = joueur.retirerQuartierDansMain();
-		Test.test(joueur.nbQuartiersDansMain() == 2 && 
+		Test.test(joueur.nbQuartiersReelDansMain() == 2 && 
 				(retour==quartier1 || retour==quartier2 || retour==quartier3), 
 				"test de retrait d'un quartier");		
 	}
@@ -87,7 +90,7 @@ public class TestJoueur {
 		joueur.reinitialiser();
 		joueur.ajouterPieces(2);
 		joueur.reinitialiser();
-		Test.test(joueur.nbQuartiersDansMain()==0 && joueur.nbQuartiersDansCite()==0
+		Test.test(joueur.nbQuartiersReelDansMain()==0 && joueur.nbQuartiersReelDansCite()==0
 				&& joueur.nbPieces()==0,"test de la r�initialisation");		
 	}
 }

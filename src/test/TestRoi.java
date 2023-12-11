@@ -10,15 +10,15 @@ public class TestRoi {
 	public static void main(String[] args) {
 		TestRoi testRoi= new TestRoi();
 		testRoi.test1();
-		//testRoi.test2();	
-		//testRoi.test3();
-		//testRoi.test4();
-		//testRoi.test5();
-		//testRoi.test6();
-		//testRoi.test7();
-		//testRoi.test8();
-		//testRoi.test9();
-		//testRoi.test10();
+		testRoi.test2();	
+		testRoi.test3();
+		testRoi.test4();
+		testRoi.test5();
+		testRoi.test6();
+		testRoi.test7();
+		testRoi.test8();
+		testRoi.test9();
+		testRoi.test10();
 	}
 	
 	public void test1(){
@@ -75,7 +75,7 @@ public class TestRoi {
 		roi.ajouterQuartier(quartier1);
 		roi.ajouterQuartier(quartier2);
 		roi.ajouterQuartier(quartier3);
-		Test.test(roi.getJoueur().nbQuartiersDansMain() == 3,"test du nombre de quartiers apr�s ajout");
+		Test.test(roi.getJoueur().nbQuartiersReelDansMain() == 3,"test du nombre de quartiers apr�s ajout");
 	}
 	public void test7(){
 		System.out.println("TEST DE LA CONSTRUCTION D'UN QUARTIER DANS LA CITE DU JOUEUR");
@@ -91,7 +91,7 @@ public class TestRoi {
 		roi.construire(quartier1);
 		roi.construire(quartier2);
 		roi.construire(quartier3);
-		Test.test(roi.getJoueur().nbQuartiersDansCite() == 3,
+		Test.test(roi.getJoueur().nbQuartiersReelDansCite() == 3,
 				"test du nombre de quartiers apr�s construction");
 		Test.test(roi.getJoueur().quartierPresentDansCite("prison"),
 				"test de la pr�sence de la prison dans la cit�");

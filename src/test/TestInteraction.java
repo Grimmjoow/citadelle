@@ -1,14 +1,14 @@
 package test;
 
-import controleur.Interaction;
+import Controleur.Interaction;
 
 public class TestInteraction {
 	public static void main(String[] args){
 		TestInteraction test = new TestInteraction();
-		test.test1();
-		//test.test2();
-		//test.test3();
-		//test.test4();
+		// test.test1();
+		//  test.test2();
+		// test.test3();
+		test.test4();
 	}	
 	
 	public void test1(){
@@ -16,7 +16,7 @@ public class TestInteraction {
 		System.out.print("Veuillez rentrer un entier : ");
 		int i = Interaction.lireUnEntier();
 		System.out.println("entier = " + i);
-		System.out.print("Veuillez rentrer un deuxi�me entier : ");
+		System.out.print("Veuillez rentrer un deuxieme entier : ");
 		int j = Interaction.lireUnEntier();
 		System.out.println("entier = " + j);
 	}

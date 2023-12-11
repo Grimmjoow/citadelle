@@ -11,15 +11,15 @@ public class TestArchitecte {
 
 	public static void main(String[] args) {
 		TestArchitecte test= new TestArchitecte();
-		test.test1();
-		//test.test2();	
+		// test.test1();
+		test.test2();	
 	}
 	
 	public void test1(){
 		System.out.println("TEST DU CONSTRUCTEUR");
 		Architecte architecte = new Architecte();
 		Test.test(architecte.getNom().equals("Architecte"),"test du nom du personnage");
-		Test.test(architecte.getRang()== 6,"test du rang du personnage");
+		Test.test(architecte.getRang()== 7,"test du rang du personnage");
 		Test.test(architecte.getCaracteristiques().equals(Caracteristiques.ARCHITECTE),
 				"test des caract�ristiques du personnage");
 		Test.test(architecte.getJoueur()==null, "test de l'initialisation de la variable \"joueur\"");
@@ -46,10 +46,10 @@ public class TestArchitecte {
 		plateau.ajouterJoueur(joueur);
 		architecte.setJoueur(joueur);
 
-		Test.test(architecte.getJoueur().nbQuartiersDansMain() == 0,
+		Test.test(architecte.getJoueur().nbQuartiersReelDansMain() == 0,
 				"test du nombre de cartes dans la main avant l'utilisation du pouvoir");			
 		architecte.utiliserPouvoir();
-		Test.test(architecte.getJoueur().nbQuartiersDansMain() == 2,
+		Test.test(architecte.getJoueur().nbQuartiersReelDansMain() == 2,
 				"test du nombre de cartes dans la main apr�s l'utilisation du pouvoir");
 			
 	}

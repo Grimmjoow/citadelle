@@ -6,9 +6,9 @@ import modele.Quartier;
 public class TestPioche {
 	public static void main(String[] args) {
 		TestPioche testPioche= new TestPioche();
-		//testPioche.test1();
-		//testPioche.test2();
-		//testPioche.test3();
+		testPioche.test1();
+		testPioche.test2();
+		testPioche.test3();
 		testPioche.test4();
 	}
 	
@@ -68,7 +68,7 @@ public class TestPioche {
 		q = new Quartier("h�tel de ville",Quartier.TYPE_QUARTIERS[3],15); pioche.ajouter(q);
 		q = new Quartier("biblioth�que",Quartier.TYPE_QUARTIERS[4],6,"Si vous choisissez..."); 
 		pioche.ajouter(q);
-		
+
 		pioche.melanger();		
 		Test.test(pioche.nombreElements()==10, "taille de la pioche apr�s m�lange");
 		System.out.println("Affichage de la pioche apr�s m�lange : ");
@@ -78,4 +78,3 @@ public class TestPioche {
 		}
 	}
 }
-

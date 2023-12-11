@@ -5,12 +5,13 @@ public class TestQuartier {
 	public static void main(String[] args){
 		TestQuartier testQuartier = new TestQuartier();
 		testQuartier.test1();	
-		//testQuartier.test2();
-		//testQuartier.test3();
-		//testQuartier.test4();
-		//testQuartier.test5();
-		//testQuartier.test6();
-		//testQuartier.test7();
+		testQuartier.test2();
+		testQuartier.test3();
+		testQuartier.test4();
+		testQuartier.test5();
+		testQuartier.test6();
+		testQuartier.test7();
+		//testQuartier.test8();
 	}
 
 	public void test1(){
@@ -23,7 +24,7 @@ public class TestQuartier {
 	}
 
 	public void test2(){
-		System.out.println("TEST POUR UN TEMPLE (RELIGIEUX");
+		System.out.println("TEST POUR UN TEMPLE RELIGIEUX");
 		Quartier quartier = new Quartier("temple",Quartier.TYPE_QUARTIERS[0],1);
 		Test.test(quartier.getNom().equals("temple"),"test du nom du quartier");
 		Test.test(quartier.getType().equals("RELIGIEUX"),"test du type du quartier");
@@ -85,5 +86,18 @@ public class TestQuartier {
 		Test.test(quartier.getCaracteristiques().equals("A la fin de la partie..."),
 			"test du changement des caracteristiques");
 	}
+	
+	public void test8(){
+		// ce test est � faire pour le personnage "Artiste" :
+		System.out.println("TEST POUR L'ENRICHISSEMENT D'UN TEMPLE");
+		Quartier quartier = new Quartier("temple",Quartier.TYPE_QUARTIERS[0],1);
+		Test.test(quartier.getEmbelli() == false,"test avant embellissement");
+		// on embellit:
+		quartier.embellir();
+		Test.test(quartier.getEmbelli() == true,"test apres embellissement");
+		Test.test(quartier.getCout() == 2,"test du cout apres embellissement");
+		// un deuxi�me embellissement ne devrait pas changer le co�t:
+		quartier.embellir();
+		Test.test(quartier.getCout() == 2,"test du cout apres un deuxieme appel (pas de changment du cout)");
+	}
 }
-
