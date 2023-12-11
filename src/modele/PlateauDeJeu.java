@@ -1,61 +1,71 @@
 package modele;
 
 public class PlateauDeJeu {
-	//attributs
-	private Personnage[] listePersonnages;
-	private Joueur[] listeJoueurs;
-	private Pioche pioche;
-	private int nombrePersonnages, nombreJoueurs;
-	//constructeur
-	public PlateauDeJeu(){
-		this.listePersonnages=new Personnage[9];
-		this.listeJoueurs=new Joueur[9];
-		this.pioche=new Pioche();
-		this.nombrePersonnages=0;
-		this.nombreJoueurs=0;
-	}
-	//accesseurs
-	public int getNombrePersonnages(){
-		return this.nombrePersonnages;
-	}
-	public int getNombreJoueurs() {
-		return this.nombreJoueurs;
-	}
-	public Pioche getPioche() {
-		return this.pioche;
-	}
-	public Personnage getPersonnage(int i) {
-		Personnage retour;
-		if(i>=0 && i<=getNombrePersonnages()) {
-			retour=this.listePersonnages[i];
-		} else {
-			retour=null;
-		}
-		return retour;
-	}
-	public Joueur getJoueur(int i) {
-		Joueur retour;
-		if(i>=0 && i<=getNombreJoueurs()) {
-			retour=this.listeJoueurs[i];
-		} else {
-			retour=null;
-		}
-		return retour;
-	}
-	//m�thodes
-	public void ajouterPersonnage(Personnage personnage) {
-		if(this.nombrePersonnages<=8 && personnage!=null) {
-			this.listePersonnages[this.nombrePersonnages]=personnage;
-			personnage.setPlateau(this);
-			this.nombrePersonnages++;
-		}
-	}
-	public void ajouterJoueur(Joueur joueur) {
-		if(this.nombreJoueurs<=8 && joueur!=null) {
-			this.listeJoueurs[this.nombreJoueurs]=joueur;
-			this.nombreJoueurs++;
-		}
-	}
+    private Personnage[] listePersonnages;
+    private Joueur[] listeJoueurs;
+    private Pioche pioche;
+    private int nombrePersonnages;
+    private int nombreJoueurs;
+
+    public PlateauDeJeu(){
+        listePersonnages = new Personnage[9];
+        listeJoueurs= new Joueur[9];
+        nombreJoueurs = 0;
+        nombrePersonnages = 0;
+        pioche = new Pioche();
+    }
+
+    public int getNombrePersonnages(){
+        return nombrePersonnages;
+    }
+
+    public int getNombreJoueurs(){
+        return nombreJoueurs;
+    }
+
+    public Pioche getPioche(){
+        return pioche;
+    }
+
+    public void setPioche(Pioche p){
+        this.pioche = p;
+    }
+
+    public Personnage getPersonnage(int i){
+        if(i >= 0 && i <= (nombrePersonnages - 1)) {
+            return listePersonnages[i];
+        }else{
+            return null;
+        }
+    }
+
+    public Joueur getJoueur(int i){
+        if(i >= 0 && i <= (nombreJoueurs - 1)) {
+            return listeJoueurs[i];
+        }else{
+            return null;
+        }
+    }
+
+    public void ajouterPersonnage(Personnage personnage){
+        if(nombrePersonnages < 9 && personnage != null){
+            listePersonnages[nombrePersonnages] = personnage;
+            personnage.setPlateau(this);
+            nombrePersonnages += 1;
+        }else{
+            System.out.println("le nombre de personnage est déjà de 9 ou la valeur renseignée en paramètre est nulle");
+        }
+    }
+
+    public void ajouterJoueur(Joueur joueur){
+        if(nombreJoueurs < 9 && joueur != null){
+            listeJoueurs[nombreJoueurs] = joueur;
+            nombreJoueurs += 1;
+        }else{
+            System.out.println("le nombre de joueur est déjà de 9 ou la valeur renseignée en paramètre est nulle");
+        }
+    }
+
+
+
 }
-
-
