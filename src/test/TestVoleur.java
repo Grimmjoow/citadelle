@@ -10,7 +10,7 @@ import modele.PlateauDeJeu;
 public class TestVoleur {
 	public static void main(String[] args) {
 		TestVoleur test = new TestVoleur();
-		//test.test1();
+		test.test1();
 		test.test2();	
 	}
 	
@@ -61,8 +61,8 @@ public class TestVoleur {
 		
 		// tests:
 		Test.test(roi.getVole(),"le roi est bien vol�");
-		Test.test(roi.getJoueur().nbPieces()==0, "le tr�sor du roi est vide");
-		Test.test(voleur.getJoueur().nbPieces()==2, "le tr�sor du voleur contient deux pi�ces");
+		Test.test(roi.getJoueur().nbPieces()==0, "le tr�sor du roi est vide"); //Dans interaction ?
+		Test.test(voleur.getJoueur().nbPieces()==2, "le tr�sor du voleur contient deux pi�ces"); //Dans interaction ?
 	}
 	
 }

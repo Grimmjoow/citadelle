@@ -14,8 +14,8 @@ public class TestCondottiere {
 	public static void main(String[] args) {
 		TestCondottiere test = new TestCondottiere();
 		test.test1();
-		//test.test2();
-		//test.test3();
+		 test.test2();
+		test.test3();
 	}
 	
 	public void test1() {
@@ -90,33 +90,33 @@ public class TestCondottiere {
 		// on affiche la main de chaque joueur:
 		System.out.print("Main du Roi (" + roi.getJoueur().getNom() + "): ");
 		Quartier [] mainRoi = roi.getJoueur().getCite();
-		for(int i = 0; i< roi.getJoueur().nbQuartiersDansCite(); i++)
+		for(int i = 0; i< roi.getJoueur().nbQuartiersReelDansCite(); i++)
 			System.out.print(mainRoi[i].getNom() + ", ");
 		System.out.println("");
 		System.out.print("Main de l'assassin (" + assassin.getJoueur().getNom() + "): ");
 		Quartier [] mainAssassin = assassin.getJoueur().getCite();
-		for(int i = 0; i< assassin.getJoueur().nbQuartiersDansCite(); i++)
+		for(int i = 0; i< assassin.getJoueur().nbQuartiersReelDansCite(); i++)
 			System.out.print(mainAssassin[i].getNom() + ", ");
 		System.out.println("");
 		System.out.print("Main du condottiere (" + condottiere.getJoueur().getNom() + "): ");
 		Quartier [] mainCondottiere = condottiere.getJoueur().getCite();
-		for(int i = 0; i< condottiere.getJoueur().nbQuartiersDansCite(); i++)
+		for(int i = 0; i< condottiere.getJoueur().nbQuartiersReelDansCite(); i++)
 			System.out.print(mainCondottiere[i].getNom() + ", ");
 		System.out.println("");
 				
 		// utiliser le pouvoir du condottiere:		
-		condottiere.utiliserPouvoir();
+		condottiere.utiliserPouvoirAvatar();
 		
 		// on r�affiche la main de chaque joueur:
 		System.out.print("Main du Roi (" + roi.getJoueur().getNom() + "): ");
-		for(int i = 0; i< roi.getJoueur().nbQuartiersDansCite(); i++)
+		for(int i = 0; i< roi.getJoueur().nbQuartiersReelDansCite(); i++)
 			System.out.print(mainRoi[i].getNom() + ", ");
 		System.out.println("");
 		System.out.print("Main de l'assassin (" + assassin.getJoueur().getNom() + "): ");
-		for(int i = 0; i< assassin.getJoueur().nbQuartiersDansCite(); i++)
+		for(int i = 0; i< assassin.getJoueur().nbQuartiersReelDansCite(); i++)
 			System.out.print(mainAssassin[i].getNom() + ", ");System.out.println("");
 		System.out.print("Main du condottiere (" + condottiere.getJoueur().getNom() + "): ");
-		for(int i = 0; i< condottiere.getJoueur().nbQuartiersDansCite(); i++)
+		for(int i = 0; i< condottiere.getJoueur().nbQuartiersReelDansCite(); i++)
 			System.out.print(mainCondottiere[i].getNom() + ", ");
 		System.out.println("");
 		
