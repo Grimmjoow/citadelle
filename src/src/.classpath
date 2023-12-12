@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<!-- Utilisation du conteneur JRE (Java Runtime Environment) -->
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<!-- Spécification d'un dossier source (src) avec exclusion de tokeep/ -->
+	<classpathentry excluding="tokeep/" kind="src" path=""/>
+	<!-- Ajout d'un autre dossier source (tokeep) -->
+	<classpathentry kind="src" path="tokeep"/>
+	<!-- Spécification du dossier de sortie pour les classes compilées (bin) -->
+	<classpathentry kind="output" path="bin"/>
+</classpath>
